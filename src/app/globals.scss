@@ -88,6 +88,6 @@ a:hover {
 
 @layer utilities {
   .two-col-layout {
-    @apply flex flex-col md:flex-row md:space-x-4 md:max-w-[75rem] gap-12 md:mx-auto md:mt-12;
+    @apply flex flex-col md:flex-row md:space-x-4 md:max-w-[75rem] md:gap-12 md:mx-auto md:mt-12;
   }
 }

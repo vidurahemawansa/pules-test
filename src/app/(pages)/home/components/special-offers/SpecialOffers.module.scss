@@ -1,0 +1,19 @@
+.trendingContainer {
+  @apply max-w-full w-full mx-auto px-4 flex flex-col mt-1 relative md:max-w-full;
+  
+  .textContents {
+    @apply absolute w-full bottom-4 left-0 px-4 z-10 flex flex-col;
+    .timezone {
+      @apply bg-white inline-flex max-w-fit px-2.5 h-6 rounded-full text-xs leading-6 font-medium text-primary-orange;
+    }
+    h4 {
+      @apply text-white font-semibold text-base mt-2;
+    }
+    .reviews {
+      @apply flex text-secondary-custom-white-100 text-[0.625rem] gap-4 items-center mt-1.5 leading-6;
+    }
+    .starWrapper {
+      @apply flex px-3 justify-between items-center max-w-fit h-6 border border-solid border-secondary-custom-white-100 rounded-2xl gap-1;        
+    }
+  }
+}
