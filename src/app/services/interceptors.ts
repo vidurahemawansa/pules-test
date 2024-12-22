@@ -17,10 +17,6 @@ export function setupInterceptors(axiosInstance: AxiosInstance): void {
       config.headers["x-api-secret"] = process.env
         .NEXT_PUBLIC_API_SECRET as string;
 
-      if (process.env.NODE_ENV === "development") {
-        console.log("Request Config:", config);
-      }
-
       return config;
     },
     (error: AxiosError) => {
@@ -31,9 +27,6 @@ export function setupInterceptors(axiosInstance: AxiosInstance): void {
 
   axiosInstance.interceptors.response.use(
     (response: AxiosResponse) => {
-      if (process.env.NODE_ENV === "development") {
-        console.log("Response Data:", response.data);
-      }
       return response;
     },
     (error: AxiosError) => {
