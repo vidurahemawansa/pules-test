@@ -1,0 +1,52 @@
+<svg width="117" height="121" viewBox="0 0 117 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_21_223)">
+<path d="M7.44018 70.3373L7.8628 21.0597C7.92285 14.0576 13.5908 8.44435 20.5432 8.50166L65.1063 8.86902C72.0587 8.92633 77.6296 14.6322 77.5695 21.6343L77.1469 70.912L7.44018 70.3373Z" fill="url(#paint0_linear_21_223)"/>
+<path d="M77.0325 83.1038L76.888 99.9508C76.828 106.953 71.16 112.566 64.2077 112.509L19.6445 112.141C12.6921 112.084 7.12126 106.378 7.18131 99.3762L7.3258 82.5291L77.0325 83.1038ZM42.2074 102.376C45.5268 102.404 48.2683 99.7149 48.2972 96.3455C48.3258 93.0024 45.6572 90.2426 42.3117 90.215C38.9924 90.1876 36.2509 92.8765 36.222 96.246C36.1931 99.6154 38.8619 102.349 42.2074 102.376Z" fill="url(#paint1_linear_21_223)"/>
+</g>
+<g filter="url(#filter0_b_21_223)">
+<rect width="77.332" height="103.57" rx="6.45508" transform="matrix(-0.965495 -0.259842 -0.256781 0.966625 115.824 20.4514)" fill="url(#paint2_linear_21_223)"/>
+<rect x="-0.71009" y="0.410611" width="76.1701" height="102.408" rx="5.87412" transform="matrix(-0.965495 -0.259842 -0.256781 0.966625 114.534 20.2806)" stroke="url(#paint3_linear_21_223)" stroke-width="1.16191"/>
+</g>
+<rect width="17.8461" height="20.0295" rx="4.20178" transform="matrix(0.966934 0.255023 -0.251769 0.967788 50.9501 12.8779)" fill="url(#paint4_linear_21_223)"/>
+<line x1="1.29102" y1="-1.29102" x2="80.8824" y2="-1.29102" transform="matrix(0.258726 -0.966107 0.964916 0.261982 69.4064 105.842)" stroke="url(#paint5_linear_21_223)" stroke-width="2.58203" stroke-linecap="round"/>
+<line x1="1.29102" y1="-1.29102" x2="35.1807" y2="-1.29102" transform="matrix(0.257886 -0.966331 -0.951247 -0.307916 32.7192 95.5278)" stroke="url(#paint6_linear_21_223)" stroke-width="2.58203" stroke-linecap="round"/>
+<defs>
+<filter id="filter0_b_21_223" x="7.09661" y="-7.09649" width="116.196" height="135.115" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="4.454"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_21_223"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_21_223" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_21_223" x1="18.6832" y1="70.4301" x2="71.4265" y2="26.1069" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF9800" stop-opacity="0.57"/>
+<stop offset="1" stop-color="#FFB74D" stop-opacity="0.77"/>
+</linearGradient>
+<linearGradient id="paint1_linear_21_223" x1="32.7269" y1="102.094" x2="60.8916" y2="97.7984" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF9800" stop-opacity="0.6"/>
+<stop offset="1" stop-color="#FF9800" stop-opacity="0.51"/>
+</linearGradient>
+<linearGradient id="paint2_linear_21_223" x1="27.5612" y1="7.19392" x2="65.4141" y2="93.9885" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF9800" stop-opacity="0.61"/>
+<stop offset="1" stop-color="#FF9800" stop-opacity="0.43"/>
+</linearGradient>
+<linearGradient id="paint3_linear_21_223" x1="38.666" y1="0" x2="38.666" y2="103.57" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.24"/>
+</linearGradient>
+<linearGradient id="paint4_linear_21_223" x1="8.92305" y1="0" x2="8.92305" y2="20.0295" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F4F3F8"/>
+<stop offset="1" stop-color="#FAF9FB" stop-opacity="0.5"/>
+</linearGradient>
+<linearGradient id="paint5_linear_21_223" x1="-9.15597" y1="0" x2="93.4521" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.67"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint6_linear_21_223" x1="-4.06377" y1="0" x2="41.4776" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.67"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_21_223">
+<rect width="69.7129" height="103.619" fill="white" transform="matrix(-0.999966 -0.00824321 -0.00857601 0.999963 71.6421 8.92188)"/>
+</clipPath>
+</defs>
+</svg>

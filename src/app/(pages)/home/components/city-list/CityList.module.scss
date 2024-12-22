@@ -1,0 +1,20 @@
+.cityContainer {
+  @apply max-w-[48rem] mx-auto px-4 md:max-w-[75rem];
+  .itemOuterContainer {
+    @apply flex flex-col justify-center gap-[0.625rem] min-w-fit items-center;
+    span {
+      @apply text-xs font-medium text-secondary-custom-grey-200;
+    }
+  }
+  .itemWrapper {
+    @apply w-[3.875rem] h-[3.875rem] box-border border-[0.125rem] border-solid border-primary-orange rounded-full;
+    @apply sm:w-[6rem] sm:h-[6rem];
+    .sliderItem {
+      @apply block w-[3.625rem] h-[3.625rem] relative bg-cover bg-center rounded-full border-[0.125rem] border-solid border-white p-0 box-border;
+      @apply sm:w-[5.75rem] sm:h-[5.75rem];
+      &:hover {
+        @apply border-secondary-custom-orange-100;
+      }
+    }
+  }
+}

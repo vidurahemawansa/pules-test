@@ -1,0 +1,33 @@
+.offersWrapper {
+  @apply overflow-x-hidden overflow-y-auto h-[22rem] mb-8 relative grid grid-cols-2 gap-6 md:pr-3;
+  .cardContainer {
+    @apply col-span-1;
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    scrollbar-width: none;
+  }
+
+  @screen lg {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+      border-radius: 10px; /* Round the corners of the scrollbar thumb */
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    #scrollableDiv {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); 
+    }
+  }
+  
+}

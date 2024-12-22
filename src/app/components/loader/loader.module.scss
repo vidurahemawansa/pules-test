@@ -1,0 +1,19 @@
+.loaderContainer {
+  @apply z-50 w-full h-full flex justify-center items-center absolute left-0 top-0;
+}
+
+.loader {
+  @apply border-solid rounded-full w-16 h-16 animate-spin border-secondary-custom-white-200;
+  border-width: 0.625rem;
+  border-top-color: #ff9800;
+}
+
+/* Create the spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

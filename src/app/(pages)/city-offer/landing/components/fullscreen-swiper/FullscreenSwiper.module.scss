@@ -1,0 +1,71 @@
+.carouselContainer {
+  @apply relative h-screen;
+  
+  .mainFullscreenSwiper {
+    @apply w-full h-screen absolute z-0 left-0 top-0;
+  }
+  .fullscreenSlide {
+    @apply w-full h-screen bg-cover bg-center relative;
+  }
+
+  .overlay {
+    @apply absolute w-full h-screen flex flex-col z-[1] justify-between;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+    .titleContainer {
+      @apply flex px-4 z-[1] items-center justify-between w-full mt-2;
+      .title {
+        @apply px-6 font-medium text-white text-sm leading-5;
+      }
+      .heartIcon {
+        @apply w-10 h-10 min-w-10 min-h-10 flex justify-center items-center cursor-pointer bg-secondary-custom-grey-400 rounded-full text-white;
+        &:hover {
+          @apply text-red-600 bg-black;
+        }
+      }
+    }
+    .bottomContent {
+      @apply flex flex-col px-4 gap-5 text-white pb-12;
+      .thumbsContainer {
+        @apply flex gap-1 p-1 bg-secondary-custom-grey-500 rounded-lg max-w-fit;
+        .thumbnailSlide,
+        .moreThumbnails {
+          @apply w-[3.375rem] h-[3.375rem] bg-cover bg-center cursor-pointer rounded;
+        }
+        .activeThumbnail,
+        .moreThumbnails {
+          @apply opacity-100
+        }
+        .moreThumbnails {
+          @apply bg-secondary-custom-grey-600 text-xs flex items-center justify-center;
+        }
+      }
+      .merchantWrapper {
+        @apply flex items-center gap-4 text-sm font-semibold;
+        .merchantImg {
+          @apply w-6 h-6 min-w-6 min-h-6 flex bg-contain bg-center rounded-full box-border border-2 border-secondary-custom-grey-500;
+        }
+      }
+      .description {
+        @apply text-xs leading-[1.125rem];
+        ul {
+          @apply pl-4 list-disc;
+        }
+      }
+    }
+  }
+  
+}
+
+.moreIndicator {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: default;
+}

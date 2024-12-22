@@ -1,0 +1,37 @@
+.cardContainer {
+  @apply rounded-2xl;
+  .cardImg {
+    @apply w-full aspect-[1/1] bg-cover bg-center rounded-2xl relative;
+    .overlay {
+      @apply w-full h-full rounded-2xl absolute top-0 left-0 z-0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30.25%, #000000 100%);
+      &:hover {
+        @apply bg-none;
+      }
+    }
+    .heartIcon {
+      @apply z-[1] absolute right-[0.625rem] top-[0.625rem] text-white;
+      &:hover {
+        @apply text-red-600;
+      }
+    }
+    .merchantWrapper {
+      @apply flex gap-2 absolute items-center font-medium text-[0.625rem] text-white bottom-[0.625rem] left-[0.625rem];
+      .merchantImg {
+        @apply w-[1.875rem] h-[1.875rem] rounded-full bg-contain bg-center;
+      }
+    }
+  }
+  .bottomContent {
+    @apply text-[0.5rem] font-medium leading-3 mt-2 flex flex-col gap-3;
+    .tagContainer {
+      @apply gap-2 flex;
+      span {
+        @apply text-white bg-primary-orange rounded-3xl h-5 px-3 leading-5;
+        &.disabled {
+          @apply bg-secondary-custom-orange-300;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.cardsContainer {
+  @apply max-w-[48rem] mx-auto px-4 mb-8;
+  .cardContent {
+    @apply w-full aspect-[22/10] relative block;    
+  }
+}

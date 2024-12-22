@@ -1,0 +1,25 @@
+
+.button {
+  @apply bg-secondary-custom-orange-100 h-11 rounded-[1.625rem] relative text-white leading-[2.75rem] font-medium mt-3;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.primary {
+  @apply h-8 bg-primary-orange text-xs leading-none max-w-fit px-6;
+}
+
+.disabled {
+  
+}
+
+.hasIcon {
+  span {
+    @apply absolute right-[0.25rem] top-[0.25rem];
+  }
+}
+
+.icon {
+  
+}

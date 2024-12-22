@@ -1,0 +1,9 @@
+.contentWrapper {
+  @apply two-col-layout;
+}
+.trendingOfferWrapper {
+  @apply flex justify-center items-center md:w-1/2 md:max-w-[30rem] md:mx-auto;
+}
+.cardWrapper {
+  @apply w-full md:w-1/2;
+}

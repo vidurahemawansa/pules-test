@@ -1,0 +1,20 @@
+.offersSectionContainer {
+  @apply max-w-full mx-auto px-4 flex flex-col mt-1 relative lg:max-w-[75rem];
+  .filterWrapper {
+    @apply flex gap-2 mb-4;
+    .tagBtn {
+      @apply bg-white h-[2.375rem] flex rounded-3xl justify-between px-2 items-center leading-[2.375rem] gap-2 text-xs;
+      box-shadow: 0 0 2px #dcdcdc;
+      &.selected,
+      &:hover {
+        @apply bg-primary-orange text-white;
+        .icon {
+          @apply text-primary-orange bg-white;
+        }
+      }
+      .icon {
+        @apply w-[1.625rem] h-[1.625rem] rounded-full flex bg-secondary-custom-orange-200 justify-center items-center text-white;
+      }
+    }
+  }
+}

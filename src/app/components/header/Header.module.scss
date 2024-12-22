@@ -1,0 +1,22 @@
+.header {
+  @apply flex justify-between items-center bg-gradient-to-b from-[rgba(255,255,255,0.6)] to-[rgba(255,152,0,0.184)] bg-center h-[6.75rem] p-4 rounded-bl-3xl rounded-br-3xl;
+  background-size: 100% 16rem;
+  .logoContainer {
+    @apply w-9 h-7 relative;
+  }
+  .userDetails {
+    @apply flex gap-4 items-center text-right text-[0.75rem] font-medium text-black;
+    .text {
+      @apply leading-none
+    }
+    span {
+      @apply text-secondary-custom-grey-100 text-[0.625rem] font-normal;;
+    }
+    .imgOuter {
+      @apply w-9 h-9 flex items-center justify-center border border-solid border-primary-orange rounded-full; 
+    }
+    .userImg {
+      @apply w-[34px] h-[34px] relative overflow-hidden rounded-full border object-top;
+    }
+  }
+}
