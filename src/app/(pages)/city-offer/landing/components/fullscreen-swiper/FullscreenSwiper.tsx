@@ -36,16 +36,8 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
     const offerImages = allOffers[activeIndex]?.images || [];
     setCurrentImage(offerImages[0] || additionalImages[0]);
 
-    const currentOfferImages = [
-      ...(allOffers[activeIndex]?.images || []),
-      ...additionalImages.slice(
-        0,
-        Math.max(0, 5 - (allOffers[activeIndex]?.images?.length || 0))
-      ),
-    ];
-    const visibleThumbnails = currentOfferImages.slice(0, 4);
     setRemainingThumbnailsCount(
-      currentOfferImages.length - visibleThumbnails.length
+      offerImages.length + additionalImages.length - 4
     );
   }, [activeIndex, allOffers]);
 
