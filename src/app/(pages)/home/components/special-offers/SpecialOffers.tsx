@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useOffersContext } from "@/app/context/OfferContext";
 import { useOffers } from "@/app/hooks/UseOffers";
+import { useRouter } from "next/navigation";
 import { Offer } from "@/app/models/offers";
 import classNames from "classnames";
 import styles from "./SpecialOffers.module.scss";
@@ -18,6 +19,7 @@ const SpecialOffers = () => {
   const [latestOffers, setLatestOffers] = useState<Offer[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const { setOffers } = useOffersContext();
+  const router = useRouter();
 
   useEffect(() => {
     if (offers && offers.length > 0) {
@@ -67,6 +69,10 @@ const SpecialOffers = () => {
     return null;
   }
 
+  const handleSeeMoreClick = (url: string) => {
+    router.push(url);
+  };
+
   return (
     <section className={styles.trendingContainer}>
       <div className="header">
@@ -98,7 +104,13 @@ const SpecialOffers = () => {
                   </div>
                   <span>120 reviews</span>
                 </div>
-                <Button buttonType="hasIcon" icon={<FaChevronRight />}>
+                <Button
+                  buttonType="hasIcon"
+                  icon={<FaChevronRight />}
+                  onClick={() =>
+                    handleSeeMoreClick(`/city-offer/details/${offer.id}`)
+                  }
+                >
                   See more
                 </Button>
               </div>
