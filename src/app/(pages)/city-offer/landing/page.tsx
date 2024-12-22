@@ -13,14 +13,14 @@ const CityOfferLanding = () => {
     name: string;
   }
 
-  const searchParams = useSearchParams(); // Get search params
+  const searchParams = useSearchParams();
   const [city, setCity] = useState<cityParam | null>(null);
 
   useEffect(() => {
-    const cityParam = searchParams.get("city"); // Get 'city' param from URL
+    const cityParam = searchParams.get("city");
     if (cityParam) {
-      const parsedCity = JSON.parse(cityParam); // Parse the city object
-      setCity(parsedCity); // Set the parsed city object in state
+      const parsedCity = JSON.parse(cityParam);
+      setCity(parsedCity); // city details from previous page to diplay on banner
     }
   }, [searchParams]);
 

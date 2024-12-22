@@ -26,11 +26,10 @@ const OfferList = () => {
   }, [offers, setOffers]);
 
   const handleTagClick = (timezone: string) => {
-    setSelectedTimezones(
-      (prevSelected) =>
-        prevSelected.includes(timezone)
-          ? prevSelected.filter((tz) => tz !== timezone) // Unselect if already selected
-          : [...prevSelected, timezone] // Add if not already selected
+    setSelectedTimezones((prevSelected) =>
+      prevSelected.includes(timezone)
+        ? prevSelected.filter((tz) => tz !== timezone)
+        : [...prevSelected, timezone]
     );
   };
 

@@ -9,7 +9,6 @@ const OfferItems = ({ offers }: { offers: Offer[] }) => {
   const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
-    // Reset the displayed offers when the parent offers are updated
     setDisplayedOffers(offers.slice(0, 8));
     setHasMore(offers.length > 8);
 

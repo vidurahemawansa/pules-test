@@ -15,12 +15,12 @@ const OfferDetails = () => {
 
   useEffect(() => {
     if (offers && offers.length > 0) {
-      const foundOffer = offers.find((offer) => offer.id === Number(id)); // Find offer by ID
-      setOfferDetails(foundOffer || null); // Set the found offer or null if not found
+      const foundOffer = offers.find((offer) => offer.id === Number(id));
+      setOfferDetails(foundOffer || null);
     }
   }, [id, offers]);
 
-  if (!id) return <p>Loading...</p>; // Show loading until the id is available
+  if (!id) return <p>Loading...</p>;
 
   return (
     <section className={styles.offerDetailContainer}>

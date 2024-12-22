@@ -1,6 +1,6 @@
 "use client";
 import React, { createContext, useState, useContext, ReactNode } from "react";
-import { Offer } from "@/app/models/offers"; // Assuming you have an Offer type
+import { Offer } from "@/app/models/offers";
 
 interface OffersContextType {
   offers: Offer[] | null;
