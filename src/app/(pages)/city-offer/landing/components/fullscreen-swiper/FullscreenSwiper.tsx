@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Offer } from "@/app/models/offers";
 import BackButton from "@/app/components/back-button/BackButton";
 import { FaRegHeart } from "react-icons/fa";
+import { Pagination } from "swiper/modules";
 import styles from "./FullscreenSwiper.module.scss";
 
 interface FullscreenSwiperProps {
@@ -65,6 +66,7 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
   return (
     <div className={styles.carouselContainer}>
       <Swiper
+        modules={[Pagination]}
         onSwiper={(swiper) => (mainSwiperRef.current = swiper)}
         pagination={{ clickable: true }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}

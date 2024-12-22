@@ -24,9 +24,9 @@
       }
     }
     .bottomContent {
-      @apply flex flex-col px-4 gap-5 text-white pb-12;
+      @apply flex flex-col px-4 text-white pb-12;
       .thumbsContainer {
-        @apply flex gap-1 p-1 bg-secondary-custom-grey-500 rounded-lg max-w-fit;
+        @apply flex gap-1 p-1 bg-secondary-custom-grey-500 rounded-lg max-w-fit mb-5;
         .thumbnailSlide,
         .moreThumbnails {
           @apply w-[3.375rem] h-[3.375rem] bg-cover bg-center cursor-pointer rounded;
@@ -40,13 +40,13 @@
         }
       }
       .merchantWrapper {
-        @apply flex items-center gap-4 text-sm font-semibold;
+        @apply flex items-center gap-4 text-sm font-semibold mb-3;
         .merchantImg {
           @apply w-6 h-6 min-w-6 min-h-6 flex bg-contain bg-center rounded-full box-border border-2 border-secondary-custom-grey-500;
         }
       }
       .description {
-        @apply text-xs leading-[1.125rem];
+        @apply text-xs leading-[1.125rem] mb-2;
         ul {
           @apply pl-4 list-disc;
         }
@@ -54,18 +54,4 @@
     }
   }
   
-}
-
-.moreIndicator {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ccc;
-  color: #000;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: default;
 }

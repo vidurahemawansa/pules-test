@@ -71,7 +71,7 @@ body {
   }
   &.fullscreen-swiper {
     .swiper-pagination {
-      @apply w-full flex items-center justify-center gap-2 h-2 z-20 absolute bottom-5 left-0;
+      @apply w-full flex items-center justify-center gap-2 h-2 z-20 absolute bottom-8 left-0;
     }
   }
 }

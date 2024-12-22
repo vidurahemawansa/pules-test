@@ -28,8 +28,8 @@ const CityList = () => {
         loop={true}
         loopAdditionalSlides={8}
         breakpoints={{
-          320: { slidesPerView: 3.5 },
-          640: { slidesPerView: 4.5 },
+          320: { slidesPerView: 4.5 },
+          640: { slidesPerView: 5 },
           768: { slidesPerView: 8 },
           992: { slidesPerView: 10 },
         }}
