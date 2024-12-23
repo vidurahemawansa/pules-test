@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper";
 
@@ -16,13 +16,17 @@ interface FullscreenSwiperProps {
 }
 
 const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
-  const additionalImages = [
-    "/cities/1.webp",
-    "/cities/2.webp",
-    "/cities/3.webp",
-    "/cities/4.webp",
-    "/cities/5.webp",
-  ];
+  const additionalImages = useMemo(
+    () => [
+      "/cities/1.webp",
+      "/cities/2.webp",
+      "/cities/3.webp",
+      "/cities/4.webp",
+      "/cities/5.webp",
+    ],
+    []
+  );
+
   const staticImg = "/cities/5.webp";
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -41,7 +45,7 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
     setRemainingThumbnailsCount(
       offerImages.length + additionalImages.length - 4
     );
-  }, [activeIndex, allOffers]);
+  }, [activeIndex, allOffers, additionalImages]);
 
   const handleThumbnailClick = (image: string) => {
     setCurrentImage(image);
