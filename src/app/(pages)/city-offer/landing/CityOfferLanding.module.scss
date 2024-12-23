@@ -34,9 +34,7 @@
     }
   }
   .mainContent {
-    @apply -mt-3;
-    @apply two-col-layout;
-    @apply md:flex-row-reverse md:mt-0 md:gap-4;
+    @apply -mt-3 flex flex-col md:space-x-4 md:max-w-[75rem] md:mx-auto md:flex-row-reverse md:mt-0 md:gap-4;
     .pagination {
       @apply mx-auto -mt-4;
     }
