@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperCore } from "swiper";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import { Offer } from "@/app/models/offers";
@@ -28,7 +30,7 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
     offer.images[0] || additionalImages[0]
   );
   const [remainingThumbnailsCount, setRemainingThumbnailsCount] = useState(0);
-  const mainSwiperRef = useRef<any>(null);
+  const mainSwiperRef = useRef<SwiperCore | null>(null);
 
   const mainSlides = allOffers.map((o) => o.images[0] || additionalImages[0]);
 
