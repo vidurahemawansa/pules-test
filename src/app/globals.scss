@@ -10,7 +10,7 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background) !important;
   font-family: "Poppins", Helvetica, sans-serif;
 }
 
