@@ -34,6 +34,7 @@ const CityList = () => {
           992: { slidesPerView: 10 },
         }}
         slidesOffsetAfter={-10}
+        className="citylist-swiper"
       >
         {cities.map((city, index) => (
           <SwiperSlide key={index}>
