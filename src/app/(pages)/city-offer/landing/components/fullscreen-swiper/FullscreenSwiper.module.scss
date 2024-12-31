@@ -1,5 +1,15 @@
 .carouselContainer {
   @apply relative h-screen;
+
+  .fixedContent {
+    @apply fixed flex justify-between z-10 px-4 w-full top-2 left-0;
+    .heartIcon {
+      @apply w-10 h-10 min-w-10 min-h-10 flex justify-center items-center cursor-pointer bg-secondary-custom-grey-400 rounded-full text-white;
+      &:hover {
+        @apply text-red-600 bg-black;
+      }
+    }
+  }
   
   .mainFullscreenSwiper {
     @apply w-full h-screen absolute z-0 left-0 top-0;
@@ -12,15 +22,9 @@
     @apply absolute w-full h-screen flex flex-col z-[1] justify-between;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
     .titleContainer {
-      @apply flex px-4 z-[1] items-center justify-between w-full mt-2;
+      @apply flex px-12 z-[1] items-center justify-center w-full mt-2 min-h-10;
       .title {
         @apply px-6 font-medium text-white text-sm leading-5;
-      }
-      .heartIcon {
-        @apply w-10 h-10 min-w-10 min-h-10 flex justify-center items-center cursor-pointer bg-secondary-custom-grey-400 rounded-full text-white;
-        &:hover {
-          @apply text-red-600 bg-black;
-        }
       }
     }
     .bottomContent {

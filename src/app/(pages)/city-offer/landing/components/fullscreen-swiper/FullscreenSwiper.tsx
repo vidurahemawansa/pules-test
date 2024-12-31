@@ -63,6 +63,12 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
 
   return (
     <div className={styles.carouselContainer}>
+      <div className={styles.fixedContent}>
+        <BackButton />
+        <div className={styles.heartIcon}>
+          <FaRegHeart />
+        </div>
+      </div>
       <Swiper
         modules={[Pagination]}
         onSwiper={(swiper) => (mainSwiperRef.current = swiper)}
@@ -71,7 +77,21 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
         className={`${styles.mainFullscreenSwiper} fullscreen-swiper`}
       >
         {mainSlides.map((_, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            key={index}
+            onClick={(event) => {
+              if (mainSwiperRef.current) {
+                const slideWidth = event.currentTarget.offsetWidth;
+                const clickX = event.nativeEvent.offsetX;
+
+                if (clickX < slideWidth / 2) {
+                  mainSwiperRef.current.slidePrev();
+                } else {
+                  mainSwiperRef.current.slideNext();
+                }
+              }
+            }}
+          >
             <div
               className={styles.fullscreenSlide}
               style={{
@@ -82,13 +102,9 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
             >
               <div className={styles.overlay}>
                 <div className={styles.titleContainer}>
-                  <BackButton />
                   <span className={styles.title}>
                     {allOffers[activeIndex]?.title || "No title Offer"}
                   </span>
-                  <div className={styles.heartIcon}>
-                    <FaRegHeart />
-                  </div>
                 </div>
                 <div className={styles.bottomContent}>
                   <div className={styles.thumbsContainer}>
