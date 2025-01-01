@@ -134,11 +134,14 @@ const SpecialOffers = () => {
           ))}
         </div>
         <div className="navigation-wrapper">
-          <div className="nav-item">
-            <FaArrowLeft onClick={() => handleNavigation("prev")} />
+          <div className="nav-item" onClick={() => handleNavigation("prev")}>
+            <FaArrowLeft />
           </div>
-          <div className="nav-item next">
-            <FaArrowRight onClick={() => handleNavigation("next")} />
+          <div
+            className="nav-item next"
+            onClick={() => handleNavigation("next")}
+          >
+            <FaArrowRight />
           </div>
         </div>
 

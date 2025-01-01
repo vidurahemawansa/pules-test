@@ -4,7 +4,7 @@
     @apply relative mx-4 h-[24rem] min-h-[24rem];
   }
   .slide-item {
-    @apply block w-full h-[24rem] z-0 absolute bg-cover bg-center box-border rounded-[0.875rem] md:h-auto md:aspect-[1/1] left-0 top-0;
+    @apply block w-full h-[24rem] z-0 absolute bg-cover bg-center box-border rounded-[0.875rem] md:aspect-[1/1] left-0 top-0;
     transition: transform 0.5s ease-in-out, left 0.3s ease-in-out;
     box-shadow: 0 0 0.5rem black;
     @apply md:w-[44%];
@@ -16,7 +16,7 @@
       transform: rotateX(0);
     }
     &.prev, &.next {
-      @apply z-[2] -left-4 md:rotate-0;
+      @apply z-[2] -left-4 md:rotate-0 opacity-55;
       transform: rotateX(45deg);
       .overlay {
         @apply hidden;
@@ -37,7 +37,7 @@
     }
   }
   .navigation-wrapper {
-    @apply hidden md:flex justify-between items-center w-full absolute top-[52%] -mt-4 z-10 px-[24%];
+    @apply hidden md:flex justify-between items-center w-full absolute top-[50%] -mt-4 z-10 px-[24%];
     .nav-item {
       @apply w-8 h-8 flex justify-center items-center rounded-full bg-gray-800 text-white border border-primary-orange cursor-pointer;
       &:hover {
