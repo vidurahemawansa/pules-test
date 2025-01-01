@@ -1,8 +1,8 @@
 .contentWrapper {
-  @apply flex flex-col md:flex-row md:space-x-4 md:max-w-[75rem] md:gap-12 md:mx-auto md:mt-12;
+  @apply flex flex-col md:space-x-4 md:max-w-[75rem] md:gap-28 md:mx-auto md:mt-12;
 }
 .trendingOfferWrapper {
-  @apply flex justify-center items-center md:w-1/2 md:max-w-[30rem] md:mx-auto;
+  @apply flex justify-center items-center md:w-full;
 }
 .cardWrapper {
   @apply w-full md:w-1/2;

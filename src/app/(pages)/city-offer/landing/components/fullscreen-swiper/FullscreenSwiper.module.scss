@@ -30,7 +30,7 @@
     .bottomContent {
       @apply flex flex-col px-4 text-white pb-12;
       .thumbsContainer {
-        @apply flex gap-1 p-1 bg-secondary-custom-grey-500 rounded-lg max-w-fit mb-5;
+        @apply flex gap-1 p-1 bg-secondary-custom-grey-500 rounded-lg max-w-fit mb-5 relative;
         .thumbnailSlide,
         .moreThumbnails {
           @apply w-[3.375rem] h-[3.375rem] bg-cover bg-center cursor-pointer rounded;
@@ -41,6 +41,19 @@
         }
         .moreThumbnails {
           @apply bg-secondary-custom-grey-600 text-xs flex items-center justify-center;
+        }
+        .modalOverlay {
+          @apply p-1 bg-secondary-custom-grey-600 rounded-lg -top-16 h-[3.875rem] absolute right-0;
+          box-shadow: 0 0 0.625rem #333;
+          .modalContent {
+            @apply flex items-center overflow-hidden max-w-full;
+          }
+          .modalThumbnails {
+            @apply flex gap-1;
+          }
+          .modalThumbnail {
+            @apply w-[3.375rem] h-[3.375rem] bg-cover bg-center cursor-pointer rounded;
+          }
         }
       }
       .merchantWrapper {

@@ -12,7 +12,12 @@ import Loader from "@/app/components/loader/loader";
 import { getClassName } from "@/app/services/utils/sliderHelper";
 import { useSwipeable } from "react-swipeable";
 import Button from "@/app/components/button/Button";
-import { FaChevronRight, FaRegStar } from "react-icons/fa";
+import {
+  FaChevronRight,
+  FaRegStar,
+  FaArrowLeft,
+  FaArrowRight,
+} from "react-icons/fa";
 
 const SpecialOffers = () => {
   const { offers, loading, error } = useOffers();
@@ -56,6 +61,17 @@ const SpecialOffers = () => {
       ),
     trackMouse: true,
   });
+
+  const handleNavigation = (direction: string) => {
+    setActiveIndex((prev) => {
+      if (direction === "next") {
+        return (prev + 1) % latestOffers.length;
+      } else if (direction === "prev") {
+        return (prev - 1 + latestOffers.length) % latestOffers.length;
+      }
+      return prev;
+    });
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -116,6 +132,14 @@ const SpecialOffers = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="navigation-wrapper">
+          <div className="nav-item">
+            <FaArrowLeft onClick={() => handleNavigation("prev")} />
+          </div>
+          <div className="nav-item next">
+            <FaArrowRight onClick={() => handleNavigation("next")} />
+          </div>
         </div>
 
         <div className="pagination-container">

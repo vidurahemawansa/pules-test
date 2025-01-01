@@ -34,6 +34,7 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
     offer.images[0] || additionalImages[0]
   );
   const [remainingThumbnailsCount, setRemainingThumbnailsCount] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const mainSwiperRef = useRef<SwiperCore | null>(null);
 
   const mainSlides = allOffers.map((o) => o.images[0] || additionalImages[0]);
@@ -53,13 +54,40 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
 
   const currentOfferImages = [
     ...(allOffers[activeIndex]?.images || []),
-    ...additionalImages.slice(
-      0,
-      Math.max(0, 5 - (allOffers[activeIndex]?.images?.length || 0))
-    ),
+    ...additionalImages,
   ];
 
   const visibleThumbnails = currentOfferImages.slice(0, 4);
+  const remainingThumbnails = currentOfferImages.slice(4);
+
+  const Modal = ({ images }: { images: string[] }) => {
+    const overlayWidth = `${3.375 * images.length + 0.25}rem`;
+
+    return (
+      <div className={styles.modalOverlay}>
+        <div
+          className={styles.modalContent}
+          style={{ width: overlayWidth }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className={styles.modalThumbnails}>
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className={styles.modalThumbnail}
+                style={{
+                  backgroundImage: `url(${image})`,
+                }}
+                onClick={() => {
+                  setCurrentImage(image);
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className={styles.carouselContainer}>
@@ -121,10 +149,14 @@ const FullscreenSwiper = ({ offer, allOffers }: FullscreenSwiperProps) => {
                       ></div>
                     ))}
                     {remainingThumbnailsCount > 0 && (
-                      <div className={styles.moreThumbnails}>
+                      <div
+                        className={styles.moreThumbnails}
+                        onClick={() => setIsModalOpen(!isModalOpen)}
+                      >
                         +{remainingThumbnailsCount}
                       </div>
                     )}
+                    {isModalOpen && <Modal images={remainingThumbnails} />}
                   </div>
                   <div className={styles.merchantWrapper}>
                     <div
